@@ -344,11 +344,11 @@ dataset_test = torch.utils.data.Subset(dataset_test, indices[-50:])
 
 # define training and validation data loaders
 data_loader = torch.utils.data.DataLoader(
-    dataset, batch_size=2, shuffle=True, num_workers=4,
+    dataset, batch_size=2, shuffle=True, num_workers=0,
     collate_fn=utils.collate_fn)
 
 data_loader_test = torch.utils.data.DataLoader(
-    dataset_test, batch_size=1, shuffle=False, num_workers=4,
+    dataset_test, batch_size=1, shuffle=False, num_workers=0,
     collate_fn=utils.collate_fn)
 
 """Now let's instantiate the model and the optimizer"""
