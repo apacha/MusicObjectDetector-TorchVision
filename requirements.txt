@@ -1,0 +1,14 @@
+torch
+torchsummary
+torchvision >= 0.3
+# Optionally install via 'pip install git+https://github.com/szagoruyko/pytorchviz'
+# pytorchviz
+pytorch-ignite
+
+codecov
+pytest
+pytest-cov
+matplotlib
+scipy
+pillow
+tqdm
