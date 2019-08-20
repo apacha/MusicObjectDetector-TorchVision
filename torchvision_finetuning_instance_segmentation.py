@@ -122,9 +122,9 @@ def get_transform(train):
 
 # use our dataset and defined transformations
 dataset = MuscimaPpDataset('muscima_pp/v2.0/data/images', "muscima_pp_masks",
-                           get_transform(train=True), True)
+                           get_transform(train=True), False, 4)
 dataset_test = MuscimaPpDataset('muscima_pp/v2.0/data/images', "muscima_pp_masks",
-                                get_transform(train=False), True)
+                                get_transform(train=False), False, 4)
 
 # split the dataset in train and test set
 torch.manual_seed(1)
@@ -156,11 +156,11 @@ model.to(device)
 
 # construct an optimizer
 params = [p for p in model.parameters() if p.requires_grad]
-optimizer = torch.optim.Adam(params, lr=0.0003, weight_decay=0.0005)
+optimizer = torch.optim.Adam(params, lr=0.0001, weight_decay=0.0005)
 
 # and a learning rate scheduler which decreases the learning rate by
 # 10x every 3 epochs
-lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.5)
+lr_scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=2, gamma=0.5)
 
 # let's train it for 10 epochs
 num_epochs = 10

@@ -33,11 +33,11 @@ class MuscimaPpDataset(Dataset):
 
     """
 
-    def __init__(self, image_directory: str, masks_directory: str, transforms=None, cache_images_in_memory=False):
+    def __init__(self, image_directory: str, masks_directory: str, transforms=None, cache_images_in_memory=False, shrink_factor=3):
         self.masks_directory = masks_directory
         self.image_directory = image_directory
         self.transforms = transforms
-        self.shrink_factor = 3
+        self.shrink_factor = shrink_factor
         # load all image files, sorting them to
         # ensure that they are aligned
         self.imgs = list(sorted(os.listdir(image_directory)))
