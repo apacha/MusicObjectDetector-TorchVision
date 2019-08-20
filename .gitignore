@@ -105,3 +105,6 @@ samples/outreach/blogs/segmentation_blogpost/carvana-image-masking-challenge/
 /muscima-pp/
 /MUSCIMA-pp_v2.0.zip
 /CVC_MUSCIMA_PP_Annotated-Images.zip
+/muscima_pp/
+/muscima_pp_masks/
+*.pth

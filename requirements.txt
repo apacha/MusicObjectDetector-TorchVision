@@ -4,6 +4,7 @@ torchvision >= 0.3
 # Optionally install via 'pip install git+https://github.com/szagoruyko/pytorchviz'
 # pytorchviz
 #pytorch-ignite
+pycocotools # For Windows, install via 'pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI'
 
 codecov
 pytest
@@ -12,4 +13,5 @@ matplotlib
 scipy
 pillow
 tqdm
-omrdatasettools >= 0.17
+omrdatasettools >= 0.19
+mung
